@@ -1,0 +1,524 @@
+{% extends "layouts/website_base.html" %}
+{% load static %}
+{% block main %}
+
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"><span>Let's go get a Sangvo!</span></h2>
+          <p class="animate__animated fanimate__adeInUp">TV content is a program Newspaper's content is news.</p>
+          <p>Youtube's content is free video.</p>
+          <p>SNS's content is the news of a friend</p>
+          <a href="#Sangvo Pay" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Let's love each other!</h2>
+          <p>Pagee's content is food</p>
+          <p class="animate__animated animate__fadeInUp">Sangvo is the name of the reward that we pay to members who watch the advertising.</p>
+          <a href="#Sangvo Pay" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+        <!-- ======= sangvo pay Section ======= -->
+        <section id="Sangvo Pay" class="Sangvo Pay">
+          <div class="container"></a>
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Sangvo Pay</h2>
+              <p>Sangvo Pay</p>
+            </div>
+          <div id="data-table-container">
+          <div style="overflow-x: scroll; overflow-y: scroll;">    
+          <table id="data-table" class="sangvopaytable">
+            <tr>
+              <td colspan="7">01.31.2024</td>
+            </tr>
+            <tr>
+              <th>No</th>
+              <th>Partner</th>
+              <th>Beginning Balance</th>
+              <th>Claim</th>
+              <th>Ending Balance</th>
+              <th class="highlight">Paid Claim</th>
+              <th>Claim Balance</th>
+            </tr>
+            <!-- 데이터 행, 반복해야 합니다. -->
+            <tr>
+              <td>1</td>
+              <td>Chungdam</td>
+              <td>3,000.00</td>
+              <td>3,000.00</td>
+              <td>0.00</td>
+              <td class="highlight">3,000.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>OBOK Restaurant</td>
+              <td>1,500.00</td>
+              <td>1,500.00</td>
+              <td>0.00</td>
+              <td class="highlight">0.00</td>
+              <td>1,500.00</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="highlight"></td>
+              <td></td>
+            </tr>
+            <!-- 나머지 데이터 행들... -->
+            <tr class="sum-row">
+              <td colspan="2">Sum</td>
+              <td>4,500.00</td>
+              <td>4,500.00</td>
+              <td>0.00</td>
+              <td class="highlight">3,000.00</td>
+              <td>1,500.00</td>
+            </tr>
+          </table>
+          </div>
+          <div style="text-align: right; margin-bottom: 10px;">
+          <div class="confirm-btn">Confirm Pay</div>
+        </div>
+              </div>
+            </div>
+            </div>
+          </div>  
+    
+          </div>
+        </section><!-- End sangvo pay Section -->
+
+                <!-- ======= Ads Play Condition Section ======= -->
+                <section id="Ads Play Condition" class="Ads Play Condition">
+                  <div class="container">
+                    <div class="section-title" data-aos="zoom-out">
+                      <h2>Ads Play Condtion</h2>
+                      <p>Ads Play Condition</p>
+                    </div>
+
+                    <div id="data-table-container">
+                      <div style="overflow-x: scroll; overflow-y: scroll;">    
+                      <table id="data-table" class="Ads Play Condition table">
+                        <tr>
+                          <td colspan="10">January 20. 2024</td>
+                        </tr>
+                        <tr>
+                          <th>No</th>
+                          <th>Advertisers</th>
+                          <th>Account No</th>
+                          <th>Product<br>Name</th>
+                          <th>Zip<br>Code</th>
+                          <th>Number</th>
+                          <th class="highlight">Play Conditions
+
+                          </th>
+                          <th class="highlight">Times a day
+
+                          </th>
+                        </tr>
+
+                      <tr>
+                        <td>1</td>
+                        <td>Jeff's Garage</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Chungdam</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>95051</td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Apple</td>
+                        <td></td>
+                        <td></td>
+                        <td>iPhone 14</td>
+                        <td></td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BOA</td>
+                        <td></td>
+                        <td></td>
+                        <td>Bank</td>
+                        <td></td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+
+                        </td>
+                        <td class="highlight">
+                          
+                        </td>
+                      </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <br>
+                </section><!-- End Ads Play Condition Section -->
+
+    <!-- ======= Partner List Section ======= -->
+    <section id="Partner List" class="Partner List">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Partner List</h2>
+          <p>Partner List</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              <div id="map"></div>
+              <script>
+                  function initMap() {
+                      var myLatLng = {lat: 37.3519631, lng: -121.9945837}; // 초기 좌표 설정
+                      var map = new google.maps.Map(document.getElementById('map'), {
+                          center: myLatLng,
+                          zoom: 13 // 초기 줌 레벨 설정
+                      });
+
+                      function addPartnerLocations() {
+                        // 파트너 위치를 지도에 추가하기 위한 가상 함수입니다.
+                        // 실제 핀이나 마커를 지도에 배치하는 코드로 교체하세요.
+                    }
+
+                      var marker = new google.maps.Marker({
+                          position: myLatLng,
+                          map: map,
+                          title: 'Hello World!'
+                      });
+
+                      // 파트너 위치 추가 함수 호출
+                      addPartnerLocations();
+
+                      const malls = [
+                      { label: "G", name: "GFC", lat: 37.3519631, lng: -121.9945837 },
+                      { label: "J", name: "Jack in the Box", lat: 37.350451, lng: -122.0291713 },
+                      { label: "C", name: "청담", lat: 37.3520371, lng: -121.9892402 }
+                    ];
+                  
+                    const bounds = new google.maps.LatLngBounds();
+                    const infoWindow = new google.maps.InfoWindow();
+                  
+                    malls.forEach(({ label, name, lat, lng }) => {
+                      const marker = new google.maps.Marker({
+                        position: { lat, lng },
+                        label,
+                        map
+                      });
+                      bounds.extend(marker.position);
+                  
+                      marker.addListener("click", () => {
+                        map.panTo(marker.position);
+                        infoWindow.setContent(name);
+                        infoWindow.open({
+                          anchor: marker,
+                          map
+                        });
+                      });
+                    });
+                  
+                    map.fitBounds(bounds);
+
+                  }
+
+                  // Google Maps API 로드 실패 시 호출될 함수
+    function handleMapError() {
+      document.getElementById('map').innerHTML = "Let's love each otehr!";
+  }
+              </script>
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgekxD1j7QjNQDhAO1MO6xJYFkgajc7x4&callback=initMap" async defer></script>
+              <!-- API 로드 시에 initMap 함수 호출, 로드 실패 시 handleMapError 함수 호출 -->
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgekxD1j7QjNQDhAO1MO6xJYFkgajc7x4&callback=initMap&libraries=&v=weekly" onerror="handleMapError()"></script>
+
+            </p>
+            <ul>
+              <i class="ri-check-double-line"></i> You can add or delete partners from the list below to save them.</li>
+            </ul>
+          </div>
+          <div style="overflow-x: scroll; overflow-y: scroll;">
+          <div class="container mx-auto p-4">
+            <table class="table-auto w-full">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="px-4 py-2">No</th>
+                  <th class="px-4 py-2">Join Date</th>
+                  <th class="px-4 py-2">Business Name</th>
+                  <th class="px-4 py-2">Owner Name First</th>
+                  <th class="px-4 py-2">Owner Name Last</th>
+                  <th class="px-4 py-2">Account No</th>
+                  <th class="px-4 py-2">Type</th>
+                  <th class="px-4 py-2">Phone</th>
+                  <th class="px-4 py-2">Email</th>
+                  <th class="px-4 py-2">City</th>
+                  <th class="px-4 py-2">State</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <!-- Table rows will be inserted here dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <script>
+            // Example data array (this should be replaced with actual data)
+            const data = [
+              // Assuming we fetch this data array from an API or a database.
+              { no: "1", joinDate: " ", businessName: "GFC", ownerFirstName: "Jeong Tae", ownerLastName: "Kim", accountNo: " ", type: " ", phone: " ", email: " ", city: "3400 El Camino Real #9, Santa Clara", state: "CA 95051" },
+              { no: "2", joinDate: " ", businessName: "Chungdam", ownerFirstName: " ", ownerLastName: " ", accountNo: " ", type: "Korean BBQ", phone: "408-246-1208", email: " ", city: "3180 El Camino Real, Santa Clara", state: "CA 95051" },
+              { no: "3", joinDate: " ", businessName: "Jack in the Box", ownerFirstName: " ", ownerLastName: " ", accountNo: " ", type: " ", phone: " ", email: " ", city: "3367 El Camino Real, Santa Clara", state: "CA 95051" },
+              { no: "4", joinDate: " ", businessName: " ", ownerFirstName: " ", ownerLastName: " ", accountNo: " ", type: " ", phone: " ", email: " ", city: " ", state: " " },
+              ];
+            
+            function populateTable(data) {
+              const tableBody = document.getElementById('tableBody');
+              // Clear the table before populating it
+              tableBody.innerHTML = '';
+              data.forEach(record => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                  <td class="border px-4 py-2">${record.no}</td>
+                  <td class="border px-4 py-2">${record.joinDate}</td>
+                  <td class="border px-4 py-2">${record.businessName}</td>
+                  <td class="border px-4 py-2">${record.ownerFirstName}</td>
+                  <td class="border px-4 py-2">${record.ownerLastName}</td>
+                  <td class="border px-4 py-2">${record.accountNo}</td>
+                  <td class="border px-4 py-2">${record.type}</td>
+                  <td class="border px-4 py-2">${record.phone}</td>
+                  <td class="border px-4 py-2">${record.email}</td>
+                  <td class="border px-4 py-2">${record.city}</td>
+                  <td class="border px-4 py-2">${record.state}</td>
+                `;
+                tableBody.appendChild(row);
+              });
+            }
+            
+            // Populate the table on document load
+            document.addEventListener('DOMContentLoaded', () => populateTable(data));
+            </script>
+
+          </div>
+        </div>
+        <br>
+        <div style="text-align: right; margin-bottom: 10px;">
+          <button id="add-row-btn">Add</button>
+          <button id="delete-row-btn">Delete</button>
+      </div>
+      </div>
+      </div>
+    </section><!-- End Partner List Section -->
+
+    <div class="row portfolio-container" data-aos="fade-up">
+            
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img"><img src="static/website/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Chungdam</h4>
+          <p>Korean BBQ</p>
+          <a href="static/website/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-img"><img src="static/website/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Apple</h4>
+          <p>iPhone 14</p>
+          <a href="static/website/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img"><img src="static/website/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>BOA</h4>
+          <p>Bank</p>
+          <a href="static/website/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-img"><img src="static/website/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Jeff's Garage</h4>
+          <p>Card</p>
+          <a href="static/website/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-img"><img src="static/website/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>?</h4>
+          <p>Web</p>
+          <a href="static/website/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+    <style>
+      /* 추가적인 스타일은 여기에 작성합니다. */
+
+      table-container {
+        max-height: 100px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .highlight {
+        background-color: #ffff99;
+      }
+      .sum-row td {
+        font-weight: bold;
+      }
+      .confirm-btn {
+        background-color: #ef6603;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 0;
+        cursor: pointer;
+      }
+
+      #add-row-btn {
+        background-color: #ef6603;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+      }
+
+      #delete-row-btn {
+        background-color: #ef6603;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+      }
+
+      /* 반응형 웹 디자인을 위한 미디어 쿼리 */
+    @media only screen and (max-width: 600px) {
+        /* 작은 화면에서는 테이블의 너비를 100%로 설정하여 모든 내용이 화면에 맞게 됨 */
+        table {
+            width: 100%;
+        }
+    }
+
+      #map {
+        height: 400px;
+        width: 200%;
+    }
+
+    </style>
+
+  </main><!-- End #main -->
+{% endblock main %}

@@ -1,0 +1,126 @@
+{% extends "layouts/website_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<style>
+  #header.header-transparent {
+    background: rgba(49, 51, 70, 0.9);
+    padding: 12px 0;
+  }
+
+  .btn-custom {
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: rgba(239, 102, 3);
+  }
+
+  .btn-custom:hover {
+    background: var(--color-rgba(239, 102, 3));
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block main %}
+<main id="main">
+  <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+      <div class="row justify-content-center" style="margin-top:100px;">
+        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="card">
+            <div class="card-body">
+
+              <div class="pt-4 pb-2 mb-4">
+                <h5 class="card-title text-center pb-0 fs-4">Sign Up</h5>
+              </div>
+
+              <form method="post" id="registrationForm" class="php-email-form">
+                <div class="row gy-3">
+
+                  <div class="col-md-5 form-group">
+                    <label for="first-name" class="form-label">First Name</label>
+                    <input type="text" name="first_name" class="form-control" id="first-name" placeholder="First Name"
+                      required>
+                  </div>
+                  <div class="col-md-5 form-group">
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" id="last-name" placeholder="Last Name"
+                      required>
+                  </div>
+                  <div class="col-md-2 form-group">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select name="gender" id="gender" class="form-select">
+                      <option value="M">M</option>
+                      <option value="Y">Y</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12 form-group">
+                    <label for="birth">Birth</label>
+                    <input type="date" class="form-control" name="birth" id="birth" placeholder="birth">
+                  </div>
+
+                  <div class="col-md-8 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                  </div>
+                  <div class="col-md-4 form-group text-end">
+                    <input type="button" class="btn btn-secondary mt-4" id="btn-email" value="check duplication" onclick="checkEmail(this);">
+                  </div>
+                  <div class="col-md-12 form-group">
+                    <label for="password1">Password</label>
+                    <input type="password" class="form-control" name="password" id="password1" placeholder="Password">
+                  </div>
+                  <div class="col-md-12 form-group">
+                    <label for="password2">Confirm Password </label>
+                    <input type="password" class="form-control" id="password2"
+                      placeholder="Confirm Password">
+                  </div>
+                  <div class="col-md-12 form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" class="form-control" id="phone" value="{{phone}}" placeholder="xxxxxxxxxx" readonly>
+                  </div>
+                  <div class="col-md-7 form-group">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
+                  </div>
+
+                  <div class="col-md-5 form-group">
+                    <label for="state" class="form-label">State</label>
+                    <select name="state" id="state" class="form-select">
+                      {% for i in state %}
+                      <option value="{{i.alpha_code}}">{{i.name}}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="col-md-5 form-group">
+                    <label for="zip-code" class="form-label">Zip Code</label>
+                    <input type="number" name="zipcode" class="form-control" id="zip-code" placeholder="Zip Code"
+                      required>
+                  </div>
+
+                  <div class="col-12 mt-3 form-group">
+                    <a class="btn-custom w-100 text-center" type="button" id="btn-submit">Join</a>
+                  </div>
+
+                  <div class="col-md-12 mt-3 form-group">
+                    <p class="small mb-0 text-end">
+                      <a class="ms-1 link-dark" href="{% url 'website:login' %}">Login</a>
+                      &middot;
+                      <a class="ms-1 text-dark" href="{% url "website:find_email" %}">Find email</a> / <a class="ms-1 text-dark" href="{% url "website:password_reset" %}">Rest Password &gt;</a>
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block javascripts %}
+<script src="{% static 'website/js/auth/script_user_registration.js' %}"></script>
+{% endblock javascripts %}

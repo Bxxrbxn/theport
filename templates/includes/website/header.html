@@ -1,0 +1,35 @@
+{% load static %}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <a href="/"><img src="/static/website/assets/img/pagee_logo.png" alt="Pagee_logo"></a>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#Sangvo Pay">Sangvo Pay</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Sangvo Management">Sangvo MGT</a></li> -->
+          <li><a class="nav-link scrollto" href="#Ads Play Condition">Ads Play Condition</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#M Sangvo E&U STM">M Sangvo E&U STM</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#Member List">Member List</a></li> -->
+          <li><a class="nav-link scrollto" href="#Partner List">Partner List</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#Patner SV Summary">Partner SV Summary(Daily)</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#Sangvo Table">Sangvo Table</a></li> -->
+          {% if request.user.is_authenticated %}
+            <ul>
+              <li><a href="{% url 'website:logout' %}" onclick="return confirm('로그아웃 하시겠습니까?');">Logout</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <li><a class="nav-link scrollto" href="{% url "website:login" %}">Login</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->

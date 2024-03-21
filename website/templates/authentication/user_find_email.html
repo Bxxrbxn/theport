@@ -1,0 +1,80 @@
+{% extends "layouts/website_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<style>
+  #header.header-transparent {
+    background: rgba(49, 51, 70, 0.9);
+    padding: 12px 0;
+  }
+
+  .btn-custom {
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: rgba(239, 102, 3);
+  }
+
+  .btn-custom:hover {
+    background: var(--color-rgba(239, 102, 3));
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block main %}
+<main id="main">
+  <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="card mb-3">
+            <div class="card-body">
+
+              <div class="pt-4 pb-2">
+                <h5 class="card-title text-center pb-0 fs-4">Find Email</h5>
+                <p class="text-center small">Enter your name & phone number to find your email</p>
+              </div>
+              <div class="row gy-3">
+
+                <div class="col-md-6 form-group">
+                  <label for="first-name" class="form-label">First Name</label>
+                  <input type="text" name="first_name" class="form-control" id="first-name" placeholder="First Name"
+                    required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="last-name" class="form-label">Last Name</label>
+                  <input type="text" name="last_name" class="form-control" id="last-name" placeholder="Last Name"
+                    required>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label for="phone">Phone</label>
+                  <input type="number" name="phone" class="form-control" id="phone" placeholder="xxxxxxxxxx" min="0" maxlength="10" oninput="maxLengthCheck(this)">
+                </div>
+                
+                <div id="result-email">
+                </div>
+                <div class="col-12 mt-4 form-group" id="btn-submit-container">
+                  <a class="btn-custom w-100 text-center" type="button" id="btn-submit" onclick="findEmail();">FIND</a>
+                </div>
+
+                <div class="col-md-12 mt-3 form-group">
+                  <p class="small mb-0 text-end">
+                    <a class="ms-1 link-dark" href="{% url 'website:login' %}">Login</a>
+                    &middot;
+                    <a class="ms-1 text-dark" href="{% url "website:password_reset" %}">Reset Password &gt;</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block javascripts %}
+<script src="{% static 'website/js/auth/script_user_find_email.js' %}"></script>
+{% endblock javascripts %}

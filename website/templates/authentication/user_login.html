@@ -1,0 +1,76 @@
+{% extends "layouts/website_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<style>
+  #header.header-transparent {
+    background: rgba(49, 51, 70, 0.9);
+    padding: 12px 0;
+  }
+
+  .btn-custom {
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: rgba(239, 102, 3);
+  }
+
+  .btn-custom:hover {
+    background: var(--color-rgba(239, 102, 3));
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block main %}
+<main id="main">
+  <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="card mb-3">
+            <div class="card-body">
+
+              <div class="pt-4 pb-2">
+                <h5 class="card-title text-center pb-0 fs-4">Login</h5>
+                <p class="text-center small">Enter your Email & Password to Login</p>
+              </div>
+
+              <form class="row g-3 needs-validation" id="loginForm">
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email" required
+                      onkeyup="enterkey(this)">
+                  </div>
+                </div>
+
+                <div class="col-12 mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" name="password" class="form-control" id="password" placeholder="Password"
+                    required onkeyup="enterkey(this)">
+                </div>
+                <div class="col-12">
+                  <a class="btn-custom w-100 text-center" type="button" id="btn-login">Login</a>
+                </div>
+                <div class="col-md-12 mt-4 form-group">
+                  <p class="small mb-0 text-end">
+                    <a class="ms-1 link-dark" href="{% url "website:certificate_phone" %}">Join</a>
+                    &middot;
+                    <a class="ms-1 text-dark" href="{% url "website:find_email" %}">Find email<a> / <a class="ms-1 text-dark"
+                          href="{% url "website:password_reset" %}">Reset Password &gt;</a>
+                  </p>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block javascripts %}
+<script src="{% static 'website/js/auth/script_user_login.js' %}"></script>
+{% endblock javascripts %}

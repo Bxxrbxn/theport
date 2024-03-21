@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Records</title>
+</head>
+<body>
+    <h1>Payment Records</h1>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Partner</th>
+            <th>Beginning Balance</th>
+            <th>Claim</th>
+            <th>Ending Balance</th>
+            <th>Paid Claim</th>
+            <th>Claim Balance</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ record.partner.name }}</td>
+            <td>{{ record.beginning_balance }}</td>
+            <td>{{ record.claim }}</td>
+            <td>{{ record.ending_balance }}</td>
+            <td>{{ record.paid_claim }}</td>
+            <td>{{ record.claim_balance }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button onclick="confirmPay()">Confirm Pay</button>
+    <script>
+        function confirmPay() {
+            // Implement the logic to confirm payment here.
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{% extends "layouts/website_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<style>
+  #header.header-transparent {
+    background: rgba(49, 51, 70, 0.9);
+    padding: 12px 0;
+  }
+
+  .btn-custom {
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: rgba(239, 102, 3);
+  }
+
+  .btn-custom:hover {
+    background: var(--color-rgba(239, 102, 3));
+  }
+</style>
+
+
+{% endblock stylesheets %}
+
+{% block main %}
+<main id="main">
+  <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="card mb-3">
+            <div class="card-body">
+
+              <div class="pt-4 pb-2">
+                <h5 class="card-title text-center pb-0 fs-4">SMS Certification</h5>
+                <p class="text-center small">Enter your phone number</p>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-9 form-group">
+                  <label for="phone">Phone</label>
+                  <input type="number" class="form-control" name="phone" id="phone" placeholder="" maxlength="10" min="0" oninput="maxLengthCheck(this)">
+                </div>
+                <div class="col-md-3 form-group text-end">
+                  <input type="button" class="btn btn-secondary mt-4" value="Send" id="btn_certificate_phone"
+                    onclick="certificatePhone(this);">
+                </div>
+                <div id="sms_certification_div" class="mt-3 d-none">
+                  <div class="row">                    
+                    <div class="col-md-9 form-group">
+                      <input type="number" class="form-control" name="sms_certification_number"
+                      id="sms_certification_number" placeholder="xxxxxx" maxlength="6" min="0"
+                      oninput="maxLengthCheck(this)">
+                    </div>
+                    <div class="col-md-3 form-group text-end">
+                      <input type="button" class="btn btn-secondary" value="check" id="btn_certificate_phone"
+                      onclick="certificateNumber(this);">
+                    </div>
+                    <div class="col-md-12 form-group text-start" id="expiration_time">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <input type="hidden" id="register-url">
+                  <input type="hidden" id="certificated-phone">
+                  <a href="javascript:;" class="btn-custom w-100 text-center d-none" type="button" id="btn-next" onclick="getRegisterPage();">Next</a>
+                </div>
+                <div class="col-md-12 mt-4 form-group">
+                  <p class="small mb-0 text-end">
+                    <a class="ms-1 link-dark" href="{% url "website:login" %}">Login</a>
+                    &middot;
+                    <a class="ms-1 text-dark" href="{% url "website:find_email" %}">Find email</a> / <a class="ms-1 text-dark" href="{% url "website:password_reset" %}">Rest Password &gt;</a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block javascripts %}
+<script src="{% static 'website/js/auth/script_user_certificate_phone.js' %}"></script>
+{% endblock javascripts %}

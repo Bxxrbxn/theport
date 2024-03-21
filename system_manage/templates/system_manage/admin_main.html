@@ -1,0 +1,27 @@
+{% extends "layouts/system_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<style>
+    .small-box {
+        width: 100%;
+        height: 80px;
+    }
+
+    .middle-box {
+        height: 250px;
+        width: 100%;
+    }
+
+    .big-box {
+        height: 250px;
+        width: 100%;
+    }
+</style>
+{% endblock stylesheets %}
+{% block main %}
+<main id="main" class="main">
+    <section class="section">
+        {{navbar_main}}
+    </section>
+</main>
+{% endblock %}
